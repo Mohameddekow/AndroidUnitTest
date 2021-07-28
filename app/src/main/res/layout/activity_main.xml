@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_marginTop="150dp"
+tools:context=".MainActivity">
+
+<TextView
+    android:id="@+id/registerText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:layout_marginTop="200dp"
+    android:fontFamily="monospace"
+    android:text="Register"
+    android:textAllCaps="true"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/tvUserNameRegister"
+    app:layout_constraintTop_toBottomOf="@id/registerText"
+    app:layout_constraintStart_toStartOf="@id/registerText"
+    app:layout_constraintEnd_toEndOf="@id/registerText"
+    android:layout_margin="25dp"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etUserNameRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:inputType="textPersonName"
+        android:hint="User Name" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/tvPasswordRegister"
+    app:layout_constraintTop_toBottomOf="@id/tvUserNameRegister"
+    app:layout_constraintStart_toStartOf="@id/tvUserNameRegister"
+    app:layout_constraintEnd_toEndOf="@id/tvUserNameRegister"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_margin="20dp"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etPasswordRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:hint="Password" />
+</com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvConfirmPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordRegister"
+        app:layout_constraintStart_toStartOf="@id/tvPasswordRegister"
+        app:layout_constraintEnd_toEndOf="@id/tvPasswordRegister"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="20dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etConfirmPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            android:hint="Confirm Password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/forgotPassword"
+    android:fontFamily="monospace"
+    android:text="Forgot Password?"
+    android:textSize="17sp"
+    android:layout_margin="5dp"
+    app:layout_constraintEnd_toEndOf="@id/tvConfirmPasswordRegister"
+    app:layout_constraintTop_toBottomOf="@id/tvConfirmPasswordRegister"/>
+
+<Button
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="register"
+    app:layout_constraintTop_toBottomOf="@id/forgotPassword"
+    app:layout_constraintStart_toStartOf="@id/tvUserNameRegister"
+    app:layout_constraintEnd_toEndOf="@id/tvUserNameRegister"
+    android:fontFamily="monospace"
+    android:textSize="17sp"
+    android:layout_marginTop="40dp"
+    android:id="@+id/btnRegister"/>
+<LinearLayout
+    app:layout_constraintEnd_toEndOf="@id/btnRegister"
+    app:layout_constraintStart_toStartOf="@id/btnRegister"
+    app:layout_constraintTop_toBottomOf="@id/btnRegister"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DoNotHaveAnAccount"
+        android:fontFamily="monospace"
+        android:padding="5dp"
+        android:text="already have and account?"/>
+    <TextView
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLogin"
+        android:text="Login"
+        android:textStyle="bold"
+        android:fontFamily="monospace"/>
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
